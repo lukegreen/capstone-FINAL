@@ -31,6 +31,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/roverView', {
+        templateUrl: 'views/roverview.html',
+        controller: 'RoverviewCtrl',
+        controllerAs: 'roverView'
+      })
       .otherwise({
         redirectTo: '/'
       });
