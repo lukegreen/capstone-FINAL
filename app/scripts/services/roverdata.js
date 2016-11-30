@@ -8,7 +8,7 @@
  * Factory in the capstoneFinalApp.
  */
 angular.module('capstoneFinalApp')
-  .factory('roverData', function () {
+  .factory('roverData', function ($resource) {
 
     // Public API here
      return $resource('https://api.nasa.gov/mars-photos/api/v1/rovers/:roverName/photos?sol=:maxSol&page=:pageNum&api_key=soma08IimfFaJ8eSYCZpnsQxLEr01sMJflVPLtZx', {}, {
