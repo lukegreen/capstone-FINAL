@@ -32,7 +32,7 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/roverView', {
+      .when('/roverView/:roverName', {
         templateUrl: 'views/roverview.html',
         controller: 'RoverviewCtrl',
         controllerAs: 'roverView'

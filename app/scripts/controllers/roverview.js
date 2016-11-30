@@ -8,17 +8,18 @@
  * Controller of the capstoneFinalApp
  */
 angular.module('capstoneFinalApp')
-  .controller('RoverviewCtrl', function ($scope, roverData) {
-    $scope.setName = function(clickEvent) {
-      $scope.roverName = clickEvent.currentTarget.name;
-      console.log($scope.roverName);
+  .controller('RoverviewCtrl', function ($scope, roverData, $routeParams) {
 
+     $scope.roverName = $routeParams.roverName;
+
+      console.log($scope.roverName);
       //get data from API
-      function init(){
+    //  function init(){
         $scope.roverData = roverData.query({roverName: $scope.roverName});
         $scope.roverData.$promise.then(function(data){
           $scope.maxSol = data.photos[0].rover.max_sol;
           $scope.roverDataTwo = roverData.query({
+            roverName: $scope.roverName,
             maxSol: $scope.maxSol
           });
           $scope.roverDataTwo.$promise.then(function(data){
@@ -35,9 +36,8 @@ angular.module('capstoneFinalApp')
           console.log($scope.mostRecent);
         });
       });
-    }
+    //}
 
-    init();
-
-  };
+    //init();
+  //};
 });
