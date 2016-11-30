@@ -1,1 +1,39 @@
-<p>This is the roverView view.</p>
+<div ng-controller="RoverviewCtrl">
+  <script type="text/ng-template" id="group-template.html">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title" style="color:#fa39c3">
+          <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
+            <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
+              {{heading}}
+            </span>
+          </a>
+        </h4>
+      </div>
+      <div class="panel-collapse collapse" uib-collapse="!isOpen">
+        <div class="panel-body" style="text-align: right" ng-transclude></div>
+      </div>
+    </div>
+  </script>
+
+  <uib-accordion close-others="true">
+    <div uib-accordion-group class="panel-default" heading="Manifest" is-open="false">
+      <ul>
+        <li>Rover: {{roverName}}</li>
+        <li>Launch Date: {{roverLaunchDate}}</li>
+        <li>Landing Date: {{roverLandingDate}}</li>
+        <li>Mission Status: {{roverStatus}}</li>
+        <li>Photos taken: {{roverTotalPhotos}}</li>
+      </ul>
+    </div>
+    <div uib-accordion-group class="panel-default" heading="Cameras" is-open="false">
+      <p>Most recent image:</p>
+      <img class="rover-photo" ng-src="{{mostRecent}}">
+    </div>
+    <div uib-accordion-group class="panel-default" heading="History" is-open="false">
+      <h3>{{roverName}}</h3>
+      <div id="historyPara"></div>
+    </div>
+  </uib-accordion>
+
+</div>
