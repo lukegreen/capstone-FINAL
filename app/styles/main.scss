@@ -24,6 +24,10 @@ body {
   color: white;
 }
 
+#curiosityHist, #opportunityHist {
+  visibility: hidden;
+}
+
 .light-body {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
