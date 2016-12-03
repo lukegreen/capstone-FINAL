@@ -4,8 +4,21 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // endbower
 
 body {
-  background: url('../images/opportunity-arm.jpg') center fixed;
+  background: url('../images/mahli-selfie-1b.0.jpg') center fixed;
   background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.btn {
+  position: relative;
+  top: 130px;
+  background: url(../images/60percent-transparent.png);
+  border-color: yellow;
+  color: yellow;
 }
 
 .rover-photo {
@@ -21,7 +34,7 @@ body {
 
 .main-buttons a {
   text-decoration: none;
-  color: white;
+  color: yellow;
 }
 
 #curiosityHist, #opportunityHist {
@@ -60,6 +73,7 @@ body {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
 
+
   /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
@@ -67,6 +81,16 @@ body {
     line-height: 40px;
     padding-bottom: 19px;
   }
+}
+
+.navbar-header{
+  background-color: #FF833D;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: black;
+  font: 900 30pt/.5  'Titillium Web', sans-serif;
+  font-size: 30pt;
 }
 
 /* Custom page footer */
@@ -82,12 +106,30 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
+  position: relative;
+  top: 100px;
+  background: url(../images/60percent-transparent.png);
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+  //border: 1px solid yellow;
+  border-radius: 5px;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 53px;
+  color: yellow;
 
   .btn {
     font-size: 21px;
     padding: 14px 24px;
+  }
+}
+
+.home-button {
+  position: relative;
+  top: -100px;
+  width: 60px;
+  margin: auto;
+
+  a {
+    color: yellow;
   }
 }
 
@@ -99,6 +141,18 @@ body {
     margin-top: 28px;
   }
 }
+
+.panel-heading {
+  background: url(../images/60percent-transparent.png);
+}
+
+.panel-title {
+  color: yellow;
+  a {
+    text-decoration: none;
+  }
+}
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
