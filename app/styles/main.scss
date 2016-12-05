@@ -4,7 +4,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // endbower
 
 body {
-  background: url('../images/mahli-selfie-1b.0.jpg') center fixed;
+  background: url('../images/curiosity-wheel.jpg') center fixed;
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
 }
@@ -126,6 +126,7 @@ body {
   text-align: center;
   //border: 1px solid yellow;
   border-radius: 5px;
+  border: 1px solid yellow;
   font-family: 'Titillium Web', sans-serif;
   font-size: 53px;
 
@@ -166,6 +167,19 @@ body {
   }
 }
 
+.rover-view-title {
+  height: 50px;
+  background: url(../images/60percent-transparent.png);
+  border-radius: 5px;
+  border: 1px solid yellow;
+  margin-bottom: 10px;
+
+  h2 {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+  }
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -187,5 +201,18 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 5px;
+  left: 20px;
+  color: #FFAD30;
+
+  h4 {
+    border-top: 1px solid #FFAD30;
+    font-size: 12pt;
+    padding-top: 5px;
   }
 }
